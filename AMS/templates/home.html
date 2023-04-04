@@ -1,0 +1,106 @@
+{% load staticfiles %} {% static "" as baseurl %}
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+    <title>Airlines Management System</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Triple Forms Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Meta tag Keywords -->
+
+    <!-- css files -->
+    <link rel="stylesheet" href="{{baseurl}}style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- //css files -->
+
+    <!-- web-fonts -->
+    <link href="{{baseurl}}//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext" rel="stylesheet">
+    <!-- //web-fonts -->
+</head>
+
+<body>
+    <div class="main-bg">
+        <!-- title -->
+        <h1>Airlines Management System</h1>
+        <!-- //title -->
+        <div class="sub-main-w3">
+            <br>
+            <div class="image-style">
+
+            </div>
+            <!-- vertical tabs -->
+            <div class="vertical-tab">
+                <div id="section1" class="section-w3ls">
+                    <input type="radio" name="sections" id="option1" checked>
+                    <label for="option1" class="icon-left-w3pvt"><span class="fa fa-user-circle" aria-hidden="true"></span>Login<br>(Only for Admin)<br><br></label>
+                    <article>
+                        <form action="adminhome" method="POST">
+                            {% csrf_token %}
+                            <h3 class="legend">
+                                <font color="white" style="margin-top: 500px;">Login Here</font>
+                            </h3>
+                            <div class="input">
+                                <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                                <input type="email" placeholder="Admin" name="email" readonly>
+                            </div>
+                            <div class="input">
+                                <span class="fa fa-key" aria-hidden="true"></span>
+                                <input type="password" placeholder="Password" name="password" required />
+                            </div>
+                            <button type="submit" class="btn submit">Login
+							</button>
+
+
+                        </form>
+                        <center>
+                            <font style="color: aliceblue;">{{err}}</font>
+                        </center>
+                    </article>
+                </div>
+
+                <div id="section2" class="section-w3ls">
+
+                    <input type="radio" name="sections" id="option2">
+
+                    <label for="option2" class="icon-left-w3pvt"><span class="fa fa-pencil-square" aria-hidden="true"></span>
+                            <a href="book"><font style="margin-top: 10px;color:black">Book Tickets<br><br><br</font></a>
+                    </label>
+
+                    <article>
+
+                    </article>
+
+                </div>
+
+                <div id="section3" class="section-w3ls">
+                    <input type="radio" name="sections" id="option3">
+
+                    <article>
+
+                    </article>
+                </div>
+            </div>
+            <!-- //vertical tabs -->
+            <div class="clear"></div>
+        </div>
+        <!-- copyright -->
+        <div class="copyright">
+            <h2> </h2>
+        </div>
+        <!-- //copyright -->
+    </div>
+
+</body>
+
+</html>
